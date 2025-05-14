@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "MainFont";
+  src: url("./assets/Nunito/static/Nunito-Regular.ttf") format("truetype");
+}
+
+:root {
+  font-family: "MainFont", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+/* input */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#custom-select {
+  min-width: 350px;
+  position: relative;
+}
+
+.top-100 {
+  top: 100%;
+}
+.bottom-100 {
+  bottom: 100%;
+}
+.max-h-select {
+  max-height: 300px;
+}
+
+/* metroneme dot */
+
+.beat-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  transition: all 0.5s ease;
+}
+
+/* volume */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type="range"]::-webkit-slider-thumb {
+    width: 15px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+}
+
+.dropdown li:nth-child(1) {
+  border-radius: 4px 4px 0 0;
+}
+.dropdown li:last-child {
+  border-radius: 0 0 4px 4px;
+}
+.dropdown li:only-child {
+  border-radius: 4px;
+}
